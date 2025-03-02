@@ -1,9 +1,21 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const contact = () => {
+const Contact = () => {
+
+  const navigate = useNavigate();
+
+  
   return (
-    <div>contact</div>
+    <>
+    <h1>Contact</h1>
+    <div className='contact-buttons'>
+        <button onClick={()=>{navigate('info')}} >Info</button>
+        <button onClick={()=>{navigate('contactForm')}} >Form</button>
+    </div>
+    </>
+    
   )
 }
 
-export default contact
+export default Contact
